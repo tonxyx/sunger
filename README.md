@@ -27,4 +27,4 @@ vendor/             contains dependent 3rd-party packages
 
 # Personal notes
 - disable frontend toolbar
-- remote jquery and bootsrap assets
+- remove jquery and bootstrap assets from app assets
