@@ -57,9 +57,19 @@ $this->beginPage(); ?>
       </div>
 
       <footer class="footer">
-        <div class="container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44878.3131213214!2d14.762028546086722!3d45.33075139935724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47648414e6b6fd93%3A0xcef8653ea7661a2e!2sSunger%2C+Hrvatska!5e0!3m2!1shr!2sno!4v1505813137268" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-          <p>© Sunger.hr 2017 - by <a href="http://tonxyx.com">Tonxyx</a></p>
+        <div class="container mt-2">
+          <div class="row">
+            <div class="col">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44878.3131213214!2d14.762028546086722!3d45.33075139935724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47648414e6b6fd93%3A0xcef8653ea7661a2e!2sSunger%2C+Hrvatska!5e0!3m2!1shr!2sno!4v1505813137268" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+            <div class="col text-right">
+              <script src="http://www.yr.no/place/Croatia/Primorje-Gorski/Sunger/external_box_three_days.js"></script>
+              <noscript><a href="http://www.yr.no/place/Croatia/Primorje-Gorski/Sunger/">Vremenska prognoza za Sunger</a></noscript>
+            </div>
+          </div>
+
+          <p class="text-right">© Sunger.hr 2017 - by <a href="http://tonxyx.com">Tonxyx</a></p>
         </div>
       </footer>
 

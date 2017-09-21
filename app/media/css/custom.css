@@ -6,7 +6,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 450px;
+  margin-bottom: 400px;
 }
 
 /* Carousel base class */
@@ -54,7 +54,7 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 430px;
+  height: 380px;
   line-height: 30px; /* Vertically center the text there */
   background-color: #f5f5f5;
 }
