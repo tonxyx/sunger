@@ -30,7 +30,7 @@ CREATE TABLE `easyii_admins` (
   `access_token` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`admin_id`),
   UNIQUE KEY `access_token` (`access_token`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +39,7 @@ CREATE TABLE `easyii_admins` (
 
 LOCK TABLES `easyii_admins` WRITE;
 /*!40000 ALTER TABLE `easyii_admins` DISABLE KEYS */;
+INSERT INTO `easyii_admins` VALUES (1,'vatrogasac_mirko','5e19738587c7bc014dbcaa5dc4994bfccf6c2af9','9oTfV9rWiIXft7H8925no_W0zja2MbIh',NULL),(2,'toni','d180305290bd707f55588ddb8852f2e6478c81af','cRP2N9xus_F6xDTDwy_bGvaqtDnFyvq7',NULL);
 /*!40000 ALTER TABLE `easyii_admins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +63,7 @@ CREATE TABLE `easyii_article_categories` (
   `status` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`category_id`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,7 +72,7 @@ CREATE TABLE `easyii_article_categories` (
 
 LOCK TABLES `easyii_article_categories` WRITE;
 /*!40000 ALTER TABLE `easyii_article_categories` DISABLE KEYS */;
-INSERT INTO `easyii_article_categories` VALUES (1,'tewt','/uploads/article/11816184102049880096835037450117-3aa145f30d.jpg',1,'tewt',1,1,2,0,1);
+INSERT INTO `easyii_article_categories` VALUES (1,'Tamburaši','/uploads/article/10987696102039246232195062259513-2dd9cb666d.jpg',1,'tamburasi',1,1,2,0,1),(2,'Vatrogasci','/uploads/article/18595354102096528377812907969878-26a8a6b118.jpg',2,'vatrogasci',2,1,2,0,1);
 /*!40000 ALTER TABLE `easyii_article_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +96,7 @@ CREATE TABLE `easyii_article_items` (
   `status` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`item_id`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,7 +105,7 @@ CREATE TABLE `easyii_article_items` (
 
 LOCK TABLES `easyii_article_items` WRITE;
 /*!40000 ALTER TABLE `easyii_article_items` DISABLE KEYS */;
-INSERT INTO `easyii_article_items` VALUES (1,1,'svasta','/uploads/article/20280707102101939060276585278027-ed494733c2.jpg','asdfasf','<p>zxcvzvv</p>','svasta',1505593548,0,1);
+INSERT INTO `easyii_article_items` VALUES (1,1,'svasta','/uploads/article/20280707102101939060276585278027-ed494733c2.jpg','asdfasf','<p>zxcvzvv</p>','svasta',1505593548,1,1),(2,1,'zxcv','/uploads/article/18517996102096385707446239004677-616be2d6f0.jpg','zxcv','<p>xzcv</p>','zxcv',1505653023,1,1),(3,2,'qwer','/uploads/article/18766744102096947955502087573074-ec84c92187.jpg','qwer','<p>qwer</p>','qwer',1505653089,0,1);
 /*!40000 ALTER TABLE `easyii_article_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -339,7 +340,7 @@ CREATE TABLE `easyii_gallery_categories` (
   `status` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`category_id`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -348,6 +349,7 @@ CREATE TABLE `easyii_gallery_categories` (
 
 LOCK TABLES `easyii_gallery_categories` WRITE;
 /*!40000 ALTER TABLE `easyii_gallery_categories` DISABLE KEYS */;
+INSERT INTO `easyii_gallery_categories` VALUES (1,'Slike Sunger','/uploads/gallery/10608220102039038948213095428925-37c3a273ae.jpg','slike-sunger',1,1,2,0,1,1);
 /*!40000 ALTER TABLE `easyii_gallery_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -398,7 +400,7 @@ CREATE TABLE `easyii_loginform` (
   `time` int(11) DEFAULT '0',
   `success` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`log_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -407,7 +409,7 @@ CREATE TABLE `easyii_loginform` (
 
 LOCK TABLES `easyii_loginform` WRITE;
 /*!40000 ALTER TABLE `easyii_loginform` DISABLE KEYS */;
-INSERT INTO `easyii_loginform` VALUES (1,'root','******','192.168.11.1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',1505480213,1),(2,'root','******','192.168.11.1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',1505509835,1),(3,'root','******','192.168.11.1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',1505592977,1);
+INSERT INTO `easyii_loginform` VALUES (1,'root','******','192.168.11.1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',1505480213,1),(2,'root','******','192.168.11.1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',1505509835,1),(3,'root','******','192.168.11.1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',1505592977,1),(4,'root','******','192.168.11.1','Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',1505637243,1);
 /*!40000 ALTER TABLE `easyii_loginform` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -463,7 +465,7 @@ CREATE TABLE `easyii_modules` (
 
 LOCK TABLES `easyii_modules` WRITE;
 /*!40000 ALTER TABLE `easyii_modules` DISABLE KEYS */;
-INSERT INTO `easyii_modules` VALUES (1,'article','yii\\easyii\\modules\\article\\ArticleModule','Articles','pencil','{\"categoryThumb\":true,\"articleThumb\":true,\"enablePhotos\":true,\"enableShort\":true,\"shortMaxLength\":255,\"enableTags\":true,\"itemsInFolder\":false}',0,40,0),(2,'carousel','yii\\easyii\\modules\\carousel\\CarouselModule','Carousel','picture','{\"enableTitle\":true,\"enableText\":true}',0,90,1),(3,'catalog','yii\\easyii\\modules\\catalog\\CatalogModule','Catalog','list-alt','{\"categoryThumb\":true,\"itemsInFolder\":false,\"itemThumb\":true,\"itemPhotos\":true,\"itemDescription\":true,\"itemSale\":true}',0,20,0),(4,'faq','yii\\easyii\\modules\\faq\\FaqModule','FAQ','question-sign','[]',0,10,0),(5,'feedback','yii\\easyii\\modules\\feedback\\FeedbackModule','Feedback','earphone','{\"mailAdminOnNewFeedback\":true,\"subjectOnNewFeedback\":\"New feedback\",\"templateOnNewFeedback\":\"@easyii\\/modules\\/feedback\\/mail\\/en\\/new_feedback\",\"answerTemplate\":\"@easyii\\/modules\\/feedback\\/mail\\/en\\/answer\",\"answerSubject\":\"Answer on your feedback message\",\"answerHeader\":\"Hello,\",\"answerFooter\":\"Best regards.\",\"enableTitle\":false,\"enablePhone\":true,\"enableCaptcha\":false}',0,60,1),(6,'file','yii\\easyii\\modules\\file\\FileModule','Files','floppy-disk','[]',0,50,1),(7,'gallery','yii\\easyii\\modules\\gallery\\GalleryModule','Photo Gallery','camera','{\"categoryThumb\":true,\"itemsInFolder\":false}',0,80,1),(8,'guestbook','yii\\easyii\\modules\\guestbook\\GuestbookModule','Guestbook','book','{\"enableTitle\":false,\"enableEmail\":true,\"preModerate\":false,\"enableCaptcha\":false,\"mailAdminOnNewPost\":true,\"subjectOnNewPost\":\"New message in the guestbook.\",\"templateOnNewPost\":\"@easyii\\/modules\\/guestbook\\/mail\\/en\\/new_post\",\"frontendGuestbookRoute\":\"\\/guestbook\",\"subjectNotifyUser\":\"Your post in the guestbook answered\",\"templateNotifyUser\":\"@easyii\\/modules\\/guestbook\\/mail\\/en\\/notify_user\"}',0,70,1),(9,'news','yii\\easyii\\modules\\news\\NewsModule','News','bullhorn','{\"enableThumb\":true,\"enablePhotos\":true,\"enableShort\":true,\"shortMaxLength\":256,\"enableTags\":true}',0,120,1),(10,'page','yii\\easyii\\modules\\page\\PageModule','Pages','file','[]',0,100,1),(11,'shopcart','yii\\easyii\\modules\\shopcart\\ShopcartModule','Orders','shopping-cart','{\"mailAdminOnNewOrder\":true,\"subjectOnNewOrder\":\"New order\",\"templateOnNewOrder\":\"@easyii\\/modules\\/shopcart\\/mail\\/en\\/new_order\",\"subjectNotifyUser\":\"Your order status changed\",\"templateNotifyUser\":\"@easyii\\/modules\\/shopcart\\/mail\\/en\\/notify_user\",\"frontendShopcartRoute\":\"\\/shopcart\\/order\",\"enablePhone\":true,\"enableEmail\":true}',0,30,0),(12,'subscribe','yii\\easyii\\modules\\subscribe\\SubscribeModule','E-mail subscribe','envelope','[]',0,45,1),(13,'text','yii\\easyii\\modules\\text\\TextModule','Text blocks','font','[]',0,65,1);
+INSERT INTO `easyii_modules` VALUES (1,'article','yii\\easyii\\modules\\article\\ArticleModule','Articles','pencil','{\"categoryThumb\":true,\"articleThumb\":true,\"enablePhotos\":true,\"enableShort\":true,\"shortMaxLength\":255,\"enableTags\":true,\"itemsInFolder\":false}',0,45,1),(2,'carousel','yii\\easyii\\modules\\carousel\\CarouselModule','Carousel','picture','{\"enableTitle\":true,\"enableText\":true}',0,100,1),(3,'catalog','yii\\easyii\\modules\\catalog\\CatalogModule','Catalog','list-alt','{\"categoryThumb\":true,\"itemsInFolder\":false,\"itemThumb\":true,\"itemPhotos\":true,\"itemDescription\":true,\"itemSale\":true}',0,20,0),(4,'faq','yii\\easyii\\modules\\faq\\FaqModule','FAQ','question-sign','[]',0,10,0),(5,'feedback','yii\\easyii\\modules\\feedback\\FeedbackModule','Feedback','earphone','{\"mailAdminOnNewFeedback\":true,\"subjectOnNewFeedback\":\"New feedback\",\"templateOnNewFeedback\":\"@easyii\\/modules\\/feedback\\/mail\\/en\\/new_feedback\",\"answerTemplate\":\"@easyii\\/modules\\/feedback\\/mail\\/en\\/answer\",\"answerSubject\":\"Answer on your feedback message\",\"answerHeader\":\"Hello,\",\"answerFooter\":\"Best regards.\",\"enableTitle\":false,\"enablePhone\":true,\"enableCaptcha\":false}',0,65,1),(6,'file','yii\\easyii\\modules\\file\\FileModule','Files','floppy-disk','[]',0,60,1),(7,'gallery','yii\\easyii\\modules\\gallery\\GalleryModule','Photo Gallery','camera','{\"categoryThumb\":true,\"itemsInFolder\":false}',0,90,1),(8,'guestbook','yii\\easyii\\modules\\guestbook\\GuestbookModule','Guestbook','book','{\"enableTitle\":false,\"enableEmail\":true,\"preModerate\":false,\"enableCaptcha\":false,\"mailAdminOnNewPost\":true,\"subjectOnNewPost\":\"New message in the guestbook.\",\"templateOnNewPost\":\"@easyii\\/modules\\/guestbook\\/mail\\/en\\/new_post\",\"frontendGuestbookRoute\":\"\\/guestbook\",\"subjectNotifyUser\":\"Your post in the guestbook answered\",\"templateNotifyUser\":\"@easyii\\/modules\\/guestbook\\/mail\\/en\\/notify_user\"}',0,80,1),(9,'news','yii\\easyii\\modules\\news\\NewsModule','News','bullhorn','{\"enableThumb\":true,\"enablePhotos\":true,\"enableShort\":true,\"shortMaxLength\":256,\"enableTags\":true}',0,120,1),(10,'page','yii\\easyii\\modules\\page\\PageModule','Pages','file','[]',0,40,0),(11,'shopcart','yii\\easyii\\modules\\shopcart\\ShopcartModule','Orders','shopping-cart','{\"mailAdminOnNewOrder\":true,\"subjectOnNewOrder\":\"New order\",\"templateOnNewOrder\":\"@easyii\\/modules\\/shopcart\\/mail\\/en\\/new_order\",\"subjectNotifyUser\":\"Your order status changed\",\"templateNotifyUser\":\"@easyii\\/modules\\/shopcart\\/mail\\/en\\/notify_user\",\"frontendShopcartRoute\":\"\\/shopcart\\/order\",\"enablePhone\":true,\"enableEmail\":true}',0,30,0),(12,'subscribe','yii\\easyii\\modules\\subscribe\\SubscribeModule','E-mail subscribe','envelope','[]',0,50,1),(13,'text','yii\\easyii\\modules\\text\\TextModule','Text blocks','font','[]',0,70,1);
 /*!40000 ALTER TABLE `easyii_modules` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -495,7 +497,7 @@ CREATE TABLE `easyii_news` (
 
 LOCK TABLES `easyii_news` WRITE;
 /*!40000 ALTER TABLE `easyii_news` DISABLE KEYS */;
-INSERT INTO `easyii_news` VALUES (1,'Povijest','/uploads/news/11040369102048528395443345257041-45a141c049.jpg','Sunger je maleno naselje u Hrvatskoj u općini Mrkopalj, koje ima 326 stanovnika, 162 muškarca i 164 žene, prema popisu iz 2011. godine.','<p>U neposrednoj blizini Sungera na ulazu u mjesto od strane <a href=\"https://hr.wikipedia.org/wiki/Delnice\">Delnica</a> i Lokava prostire se prekrasna crnogorična šuma Sungerski lug koja je do 1947. bila Zemljišna zajednica. U sklopu katastarske općine Sunger nalazi se planinski vrh Burni Bitoraj koji sa svojih 1385 m/nm predstavlja početak planinskog lanca poznat kao Velika Kapela. Najljepši dio Burnog Bitoraja nalazi se na sungerskoj strani posebice je to vidljivo između Sungera i Mrkoplja gdje se pruža pogled na cijelu planinu koja ovaj dio Gorskog kotara štiti od mediteranske klime. Sjeverozapadno su <a href=\"https://hr.wikipedia.org/wiki/Park-%C5%A1uma_Golubinjak\">park-šuma Golubinjak</a>, rezervat šumske vegetacije i <a href=\"https://hr.wikipedia.org/wiki/Lokve\">Lokve</a>, zapadno su <a href=\"https://hr.wikipedia.org/wiki/Brestova_Draga\">Brestova Draga</a>, <a href=\"https://hr.wikipedia.org/wiki/Slavica_(Fu%C5%BEine)\">Slavica</a> i <a href=\"https://hr.wikipedia.org/wiki/Belo_Selo\">Belo Selo</a>, jugozapadno su <a href=\"https://hr.wikipedia.org/wiki/Vrata_(Fu%C5%BEine)\">Vrata</a>, istočno je <a href=\"https://hr.wikipedia.org/wiki/Mrkopalj\">Mrkopalj</a>.</p>','povijest',1505593274,17,1);
+INSERT INTO `easyii_news` VALUES (1,'Povijest','/uploads/news/11040369102048528395443345257041-45a141c049.jpg','Sunger je maleno naselje u Hrvatskoj u općini Mrkopalj, koje ima 326 stanovnika, 162 muškarca i 164 žene, prema popisu iz 2011. godine.','<p>U neposrednoj blizini Sungera na ulazu u mjesto od strane <a href=\"https://hr.wikipedia.org/wiki/Delnice\">Delnica</a> i Lokava prostire se prekrasna crnogorična šuma Sungerski lug koja je do 1947. bila Zemljišna zajednica. U sklopu katastarske općine Sunger nalazi se planinski vrh Burni Bitoraj koji sa svojih 1385 m/nm predstavlja početak planinskog lanca poznat kao Velika Kapela. Najljepši dio Burnog Bitoraja nalazi se na sungerskoj strani posebice je to vidljivo između Sungera i Mrkoplja gdje se pruža pogled na cijelu planinu koja ovaj dio Gorskog kotara štiti od mediteranske klime. Sjeverozapadno su <a href=\"https://hr.wikipedia.org/wiki/Park-%C5%A1uma_Golubinjak\">park-šuma Golubinjak</a>, rezervat šumske vegetacije i <a href=\"https://hr.wikipedia.org/wiki/Lokve\">Lokve</a>, zapadno su <a href=\"https://hr.wikipedia.org/wiki/Brestova_Draga\">Brestova Draga</a>, <a href=\"https://hr.wikipedia.org/wiki/Slavica_(Fu%C5%BEine)\">Slavica</a> i <a href=\"https://hr.wikipedia.org/wiki/Belo_Selo\">Belo Selo</a>, jugozapadno su <a href=\"https://hr.wikipedia.org/wiki/Vrata_(Fu%C5%BEine)\">Vrata</a>, istočno je <a href=\"https://hr.wikipedia.org/wiki/Mrkopalj\">Mrkopalj</a>.</p>','povijest',1505593274,59,1);
 /*!40000 ALTER TABLE `easyii_news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -513,7 +515,7 @@ CREATE TABLE `easyii_pages` (
   `slug` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`page_id`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -522,6 +524,7 @@ CREATE TABLE `easyii_pages` (
 
 LOCK TABLES `easyii_pages` WRITE;
 /*!40000 ALTER TABLE `easyii_pages` DISABLE KEYS */;
+INSERT INTO `easyii_pages` VALUES (1,'Tamburaši','<p>Sungerski tamburaši svoj tradicionalni koncert na prvi dan Božića – Sv. Stjepana, upriličili su u staroj sungerskoj školi. Svi koncerti bili su izuzetno dobro posjećeni što govori da mještani Mrkoplja i Sungera itekako vole koncerte svojih miljenika.</p><p>test text</p>','tamburasi');
 /*!40000 ALTER TABLE `easyii_pages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -541,7 +544,7 @@ CREATE TABLE `easyii_photos` (
   `order_num` int(11) NOT NULL,
   PRIMARY KEY (`photo_id`),
   KEY `model_item` (`class`,`item_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -550,6 +553,7 @@ CREATE TABLE `easyii_photos` (
 
 LOCK TABLES `easyii_photos` WRITE;
 /*!40000 ALTER TABLE `easyii_photos` DISABLE KEYS */;
+INSERT INTO `easyii_photos` VALUES (1,'yii\\easyii\\modules\\news\\models\\News',1,'/uploads/photos/10662069102038600246845833910774-b3305e613a.jpg','zxcvzvwqereq',1),(2,'yii\\easyii\\modules\\news\\models\\News',1,'/uploads/photos/10608220102039038948213095428925-2668525335.jpg','zxcvxzv',2),(3,'yii\\easyii\\modules\\news\\models\\News',1,'/uploads/photos/10608229102038725747583276651916-aa5d0aeb48.jpg','asdfasdfwqerewqr',3),(4,'yii\\easyii\\modules\\news\\models\\News',1,'/uploads/photos/10887271102038773710382311054629-3ffe573f47.jpg','asdfaf',4),(5,'yii\\easyii\\modules\\article\\models\\Item',1,'/uploads/photos/10887271102038773710382311054629-9ce73ca40f.jpg','',5),(6,'yii\\easyii\\modules\\article\\models\\Item',1,'/uploads/photos/10987696102039246232195062259513-b4a5316065.jpg','',6),(7,'yii\\easyii\\modules\\article\\models\\Item',1,'/uploads/photos/10662069102038600246845833910774-b564955f83.jpg','',7),(8,'yii\\easyii\\modules\\article\\models\\Item',1,'/uploads/photos/11040369102048528395443345257041-ff2a3e020b.jpg','',8),(9,'yii\\easyii\\modules\\article\\models\\Item',2,'/uploads/photos/18595354102096528377812907969878-95913b78cc.jpg','',9),(10,'yii\\easyii\\modules\\article\\models\\Item',2,'/uploads/photos/18766744102096947955502087573074-79d273788c.jpg','',10),(11,'yii\\easyii\\modules\\article\\models\\Item',2,'/uploads/photos/19942906102100437296733431264817-fe8ad4fc1c.jpg','',11),(12,'yii\\easyii\\modules\\article\\models\\Item',3,'/uploads/photos/18766744102096947955502087573074-e23bfb7e4a.jpg','',12),(13,'yii\\easyii\\modules\\article\\models\\Item',3,'/uploads/photos/19942906102100437296733431264817-3a23a92824.jpg','',13),(14,'yii\\easyii\\modules\\article\\models\\Item',3,'/uploads/photos/18595354102096528377812907969878-e45ce28dae.jpg','',14),(15,'yii\\easyii\\modules\\article\\models\\Item',3,'/uploads/photos/18517996102096385707446239004677-c27a857ce5.jpg','',15),(16,'yii\\easyii\\modules\\gallery\\models\\Category',1,'/uploads/photos/10887271102038773710382311054629-064bd288fe.jpg','',16),(17,'yii\\easyii\\modules\\gallery\\models\\Category',1,'/uploads/photos/11143687102048531643524541955480-e227bc39fb.jpg','',17),(18,'yii\\easyii\\modules\\gallery\\models\\Category',1,'/uploads/photos/10987696102039246232195062259513-4b1672d2d8.jpg','',18),(19,'yii\\easyii\\modules\\gallery\\models\\Category',1,'/uploads/photos/11112961102045003419721152322749-ed7665d86a.jpg','',19),(20,'yii\\easyii\\modules\\gallery\\models\\Category',1,'/uploads/photos/11216599102045281147864187798959-ceb187d9b7.jpg','',20),(21,'yii\\easyii\\modules\\gallery\\models\\Category',1,'/uploads/photos/11040369102048528395443345257041-8a2745a63a.jpg','',21),(22,'yii\\easyii\\modules\\gallery\\models\\Category',1,'/uploads/photos/11206677102045230148189228007033-919207a9ab.jpg','',22);
 /*!40000 ALTER TABLE `easyii_photos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -810,4 +814,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-16 21:34:54
+-- Dump completed on 2017-09-17 13:20:00
