@@ -1,6 +1,9 @@
 <style>
 .easyii-box {
   margin-right: 5px;
+}
+
+.easyii-box img {
   margin-bottom: 5px;
 }
 </style>
