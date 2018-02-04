@@ -8,14 +8,17 @@ use yii\helpers\Url;
 // $page = Page::get('page-gallery');
 //
 // $this->title = $page->seo('title', $page->model->title);
-// $this->params['breadcrumbs'][] = $page->model->title;
-?>
-<h1><?php //echo $page->seo('h1', $page->title) ?></h1>
-<br/>
+// $this->params['breadcrumbs'][] = $page->model->title; ?>
 
-<?php foreach(Gallery::cats() as $album) : ?>
-    <a class="center-block" href="<?= Url::to(['gallery/view', 'slug' => $album->slug]) ?>">
-        <?= Html::img(Image::thumb($album->image, 160, 120)) ?><br/><?= $album->title ?>
-    </a>
-    <br/>
-<?php endforeach; ?>
+<h1>Galerija</h1>
+
+<div class="row">
+  <?php foreach(Gallery::cats() as $album) { ?>
+    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+      <a href="<?= Url::to(['gallery/view', 'slug' => $album->slug]) ?>">
+        <?= Html::img(Image::thumb($album->image, 365, 365), ['class' => 'img-responsive']) ?>
+        <h6 class="text-muted"><?= $album->title ?></h6>
+      </a>
+    </div>
+  <?php } ?>
+</div>

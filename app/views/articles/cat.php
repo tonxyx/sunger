@@ -9,26 +9,24 @@ $this->params['breadcrumbs'][] = $cat->model->title;
 <h1><?= $cat->seo('h1', $cat->title) ?></h1>
 <br/>
 
-<?php if(count($items)) : ?>
-    <?php foreach($items as $article) : ?>
-        <div class="row">
-            <div class="col-md-2">
-                <?= Html::img($article->thumb(160, 120)) ?>
+<div class="row">
+    <?php if(count($items)) { ?>
+      <div class="card-deck">
+        <?php foreach($items as $article) { ?>
+          <a href="<?php echo Url::toRoute(['articles/view', 'slug' => $article->slug]); ?>">
+            <div class="card" style="width: 300px; height: 400px;">
+              <?php echo Html::img($article->thumb(300, 250), ['class' => "card-img-top"]); ?>
+              <div class="card-body">
+                <h5 class="card-title"><?php echo $article->title; ?></h5>
+                <p class="card-text" style="color: black"><?php echo $article->short; ?></p>
+              </div>
             </div>
-            <div class="col-md-10">
-                <?= Html::a($article->title, ['articles/view', 'slug' => $article->slug]) ?>
-                <p><?= $article->short ?></p>
-                <p>
-                    <?php foreach($article->tags as $tag) : ?>
-                        <a href="<?= Url::to(['/articles/cat', 'slug' => $article->cat->slug, 'tag' => $tag]) ?>" class="label label-info"><?= $tag ?></a>
-                    <?php endforeach; ?>
-                </p>
-            </div>
-        </div>
-        <br>
-    <?php endforeach; ?>
-<?php else : ?>
-    <p>Category is empty</p>
-<?php endif; ?>
+          </a>
+        <?php } ?>
+      </div>
+    <?php } else { ?>
+      <p>Category is empty</p>
+    <?php } ?>
 
-<?= $cat->pages() ?>
+    <?= $cat->pages() ?>
+</div>

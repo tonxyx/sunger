@@ -1,5 +1,6 @@
 <?php
 use yii\easyii\modules\article\api\Article;
+use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->title = $article->seo('title', $article->model->title);
@@ -8,6 +9,8 @@ $this->params['breadcrumbs'][] = ['label' => $article->cat->title, 'url' => ['ar
 $this->params['breadcrumbs'][] = $article->model->title;
 ?>
 <h1><?= $article->seo('h1', $article->title) ?></h1>
+
+<?php echo Html::img($article->thumb(300, 250), ['class' => "card-img-top"]); ?>
 
 <?= $article->text ?>
 
